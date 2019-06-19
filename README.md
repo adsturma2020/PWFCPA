@@ -1,2 +1,2 @@
-# Protótipo prontuário
+# Protótipo Prontuário
 Versão = Alpha
