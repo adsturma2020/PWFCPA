@@ -1,0 +1,305 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Cadastro De Prontuário</title>
+
+  <!--responsive tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="http://www.fasipecpa.com.br/">Fasipe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/index.html">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/Prontuario.html">Cadastro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Clinicas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ajuda</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Busca</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Alertas -->
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Atenção!</h4>
+  <p class="mb-0"> Matenha o prontúario,<a href="#" class="alert-link"> atualizado após o cadastro</a>.</p>
+</div>
+
+
+
+<!--Import thema css -->
+<link href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/_bootswatch.scss" rel="stylesheet" type="text/css">
+<link href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/_variables.scss" rel="stylesheet" type="text/css"> 
+
+<!--import links -->
+
+<link href="file:///C:/Users/Koa/Documents/ProntuarioWeb/Web/index.html">
+
+</head>
+
+<body>
+
+  <div class="container"> 
+    <form>
+      <br>
+      <!-- Nome,data de nascimento-->
+      <div class="form-row">
+        <div class="form-group col mb-3">
+          <label>Nome do prontuário</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col-md-3 mb-3">
+          <label>Data de nasc.</label>
+          <input type="date" class="form-control">
+        </div>
+      </div>
+      <!-- Email,telefone,sexo -->
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputPassword4">Telefone</label>
+          <input type="number" class="form-control" id="telefone" placeholder="(65) 9999 9999">
+        </div>
+        <div class="form group col-md-2">
+          <label>Sexo:</label>
+          <div class="custom-control custom-radio custom-control-inline" style="margin-left:1em">
+            <input type="radio" id="Sexo1" name="Sexo1" class="custom-control-input">
+            <label class="custom-control-label" for="Sexo1">Masculino</label>
+          </div>
+          <div class=" custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Sexo2" name="Sexo1" class="custom-control-input">
+            <label class="custom-control-label" style="margin-left:3.60em" for="Sexo2">Feminino</label>
+          </div>
+        </div>
+      </div>
+      <!--Escolariedade,ocupação-->
+      <div class="form-row">
+        <div class="col mb-3">
+          <label>Ocupação</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col-sm-5">
+          <label>Escolariedade</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <!--Observacões-->
+      <div class="row">
+        <div class="col mb-3">
+          <label>Observacões</label>
+          <textarea class="form-control" id="observacoes" rows="5"></textarea>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <!--cep-->
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label>CEP</label>
+          <input type="text" class="form-control" id="cep">
+        </div>
+      </div>
+      <!--endereço,numero-->
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-3">
+          <label>Endereço</label>
+          <input type="text" class="form-control" id="endereco">
+        </div>
+        <div class="form-group col-md-2 mb-3">
+          <label>Numero</label>
+          <input type="number" class="form-control" id="numero">
+        </div>
+      </div>
+
+      <!--Complemento,bairro-->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Complemento</label>
+          <input type="text" class="form-control" id="complemento">
+        </div>
+        <div class="form-group col-md-2 mb-3">
+          <label>Bairro</label>
+          <input type="text" class="form-control" id="bairro">
+        </div>
+      </div>
+
+
+      <!--Cidade,estado,pais-->
+      <div class="form-row">
+        <div class="form-group col-md-3 mb-3">
+          <label>Cidade</label>
+          <input type="text" class="form-control" id="cidade">
+        </div>
+        <div class="col-md-2 mb-3">
+          <label>Estado</label>
+          <input type="text" class="form-control" id="estado">
+        </div>
+        <div class="col-md-2 mb-3">
+          <label>Pais</label>
+          <input type="text" class="form-control" id="pais">
+        </div>
+      </div>
+
+      
+    
+      <!--limitações-->
+      <div class="form-row">
+       
+	   <label>Limitação:</label>
+        
+		<div class="form-group col mb-3"> 
+          <input type="text" class="form-control" placeholder="Outros">
+        </div>
+		
+		<div class="custom-control custom-checkbox custom-control-inline">
+          <div class="form-group col-md-3 mb-3">
+           <input class="form-check-input" type="checkbox" id="cognitiva" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Cognitiva</label>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <div class="form-group col-md-3 mb-3">
+             <input class="form-check-input" type="checkbox" id="locomoção" value="option2">
+             <label class="form-check-label" for="inlineCheckbox2">Locomoção</label>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <div class="form-group col-md-3 mb-3">
+             <input class="form-check-input" type="checkbox" id="visão" value="option2">
+             <label class="form-check-label" for="inlineCheckbox2">Visão</label>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <div class="form-group col-md-3 mb-3">
+             <input class="form-check-input" type="checkbox" id="audição" value="option2">
+			<label class="form-check-label" for="inlineCheckbox2">Audição</label>
+          </div>
+        </div>
+     
+		
+
+
+	 </div>
+
+	  
+	  
+      <!--Alergia-->
+
+      <div class="form-group">
+        <label>Alergia</label>
+        <input type="text" class="form-control" id="alergia">
+      </div>
+      <div class="form-group">
+        <label>Motivo do Atendimento</label>
+        <input type="text" class="form-control" id="motivoatendimento">
+      </div>
+
+      <!--Sinais Vitais-->
+      <div class="form-row">
+        <label>Sinais Vitais:</label>
+        <label>PA</label>
+        <div class="form-group col-md-1 mb-3">
+          <input type="text" class="form-control" id="pa">
+        </div>
+        <label>FC</label>
+        <div class="form-group col-md-1 mb-3">
+          <input type="text" class="form-control" id="fc">
+        </div>
+        <label>FR</label>
+        <div class="form-group col-md-1 mb-3">
+          <input type="text" class="form-control" id="fr">
+        </div>
+        <label>T</label>
+        <div class="form-group col-md-1 mb-3">
+          <input type="text" class="form-control" id="t">
+        </div>
+      </div>
+      <!--Doencas Cronicas-->
+      <div class="form-row">
+        <div class="form-group col mb-3">
+          <label>Doenças Cronicas:</label>
+          <input type="text" class="form-control" id="doencascronicas">
+        </div>
+      </div>
+      <!--Queixa-->
+      <div class="form-row">
+        <div class="form-group col mb-3">
+          <label>Queixa no momento:</label>
+          <input type="text" class="form-control" id="queixamomento">
+        </div>
+      </div>
+
+      <!--Anamnese-->
+      <div class="form-row">
+
+        <div class="form-group col mb-3">
+          <label>Anamnese</label>
+          <textarea class="form-control" id="anamnese" rows="10"></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col mb-3">
+          <label>Exame Fisico</label>
+          <textarea class="form-control" id="examefisico" rows="10"></textarea>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Cadastrar</button>
+      <button class="btn btn-primary" type="reset">Resetar</button>
+	  <br>  
+    </form>
+
+
+</div>
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
