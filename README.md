@@ -1,2 +1,2 @@
 # Protótipo Prontuário
-Versão = 1.2
+Versão = Alpha
