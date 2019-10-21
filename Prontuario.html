@@ -1,0 +1,362 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Cadastro De Prontuário</title>
+
+  <!--responsive tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--sidebar -->
+ <div id="mySidenav" class="sidenav">
+  <a href="http://www.fasipecpa.com.br/graduacao/cursos/nutricao-18" id="about">Nutrição</a>
+  <a href="http://www.fasipecpa.com.br/graduacao/cursos/fisioterapia-15" id="blog">Fisioterapia</a>
+  <a href="http://www.fasipecpa.com.br/graduacao/cursos/odontologia-24" id="projects">Odontologia</a>
+  <a href="http://www.fasipecpa.com.br/graduacao/cursos/biomedicina-6" id="contact">Bio Medicina</a>
+</div> 
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+   
+  
+  <a class="navbar-brand" href="http://www.fasipecpa.com.br/">Fasipe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Prontuario.html">Cadastro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Clinicas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ajuda</a>
+      </li>
+    </ul>
+   
+   <!-- busca css, sem link
+   <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Busca</button> 
+</form>  -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <form class="example" action="resultado.html">
+  <input type="text" placeholder="Buscar" name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+  
+  
+  </div>
+</nav>
+
+
+<!-- Alertas -->
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Atenção!</h4>
+  <p class="mb-0"> Matenha o prontúario,<a href="#" class="alert-link"> atualizado após o cadastro</a>.</p>
+</div>
+
+<!--Import thema css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/_bootswatch.scss" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/_variables.scss" rel="stylesheet" type="text/css"> 
+
+
+<!--import links -->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link href="index.html">
+<link href="resultado.html">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="js/menu.js">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+<!-- Codigo dos formularios -->
+
+  <div class="container"> 
+    <form>
+      <br>
+      <!-- Nome,data de nascimento-->
+      <div class="form-row">
+        <div class="form-group col">
+          <label>Nome do prontuário</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col">
+          <label>Data de nasc.</label>
+          <input type="date" class="form-control">
+        </div>
+		
+		<div class="col">
+          <label>Ocupação</label>
+          <input type="text" class="form-control">
+		</div>
+      </div>
+      <!-- Email,telefone,sexo -->
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group col">
+          <label for="inputPassword4">Telefone</label>
+          <input type="number" class="form-control" id="telefone" placeholder="(65) 9999 9999">
+        </div>
+        <div class="form group col">
+          <label>Sexo:</label>
+          <select class="form-control">
+		<option>Masculino</option>
+		<option>Feminino</option>
+		</select>
+        </div>
+		
+ </div>
+   <!--Escolariedade,ocupação-->
+      <div class="form-row">
+        <div class="col -auto">
+          <label>Ocupação</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col">
+          <label>Escolaridade</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+	  <br>
+      <!--Observacões-->
+      <div class="row">
+        <div class="col">
+          <label>Observações</label>
+          <textarea class="form-control" id="observacoes" rows="4"></textarea>
+        </div>
+      </div>
+      <br>
+
+      <!--cep,endereço,numero-->
+      <div class="form -group row">
+        <div class="col">
+          <label>CEP</label>
+          <input type="text" class="form-control" id="cep">
+        </div>
+		<div class="col">
+          <label>Endereço</label>
+          <input type="text" class="form-control" id="endereco">
+        </div>
+		
+		<div class="col">
+          <label>Numero</label>
+          <input type="number" class="form-control" id="numero">
+        </div>
+      </div>
+<br>	  
+     
+
+      <!--Complemento,bairro-->
+      <div class="form-row">
+        <div class="form-group col">
+          <label>Complemento</label>
+          <input type="text" class="form-control" id="complemento">
+        </div>
+        <div class="form-group col">
+          <label>Bairro</label>
+          <input type="text" class="form-control" id="bairro">
+        </div>
+      </div>
+
+      <!--Cidade,estado,pais-->
+      <div class="form-row">
+        <div class="form-group col">
+          <label>Cidade</label>
+          <input type="text" class="form-control" id="cidade">
+        </div>
+        <div class="col">
+          <label>Estado</label>
+          <input type="text" class="form-control" id="estado">
+        </div>
+        <div class="col">
+          <label>Pais</label>
+          <input type="text" class="form-control" id="pais">
+        </div>
+      </div>
+
+<br>
+      <!--limitações-->
+      <div class="form-row">
+	   <label>Limitação</label>
+		<div class="form-group col"> 
+		
+          <input type="text" class="form-control" placeholder="Outros">
+        </div>
+		
+		<div class="custom-control custom-checkbox custom-control-inline">
+          <div class="col">
+           <input class="form-check-input" type="checkbox" id="cognitiva" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Cognitiva</label>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <div class="col">
+             <input class="form-check-input" type="checkbox" id="locomoção" value="option2">
+             <label class="form-check-label" for="inlineCheckbox2">Locomoção</label>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <div class="col">
+             <input class="form-check-input" type="checkbox" id="visão" value="option2">
+             <label class="form-check-label" for="inlineCheckbox2">Visão</label>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <div class="col">
+             <input class="form-check-input" type="checkbox" id="audição" value="option2">
+			<label class="form-check-label" for="inlineCheckbox2">Audição</label>
+          </div>
+        </div>
+	 </div>
+	  
+      <!--Alergia-->
+
+      <div class="form-group">
+        <label>Alergia</label>
+        <input type="text" class="form-control" id="alergia">
+      </div>
+      <div class="form-group">
+        <label>Motivo do Atendimento</label>
+        <input type="text" class="form-control" id="motivoatendimento">
+      </div>
+
+      <!--Sinais Vitais-->
+      
+	  <div class="form-row">
+        <label>Sinais Vitais:</label>
+       &nbsp;&nbsp;&nbsp;
+	   <label>PA</label>   
+		<div class="form-group col">
+          <input type="text" class="form-control" id="pa">
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>FC</label>
+        <div class="form-group col">
+          <input type="text" class="form-control" id="fc">
+        </div>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>FR</label>
+        <div class="form-group col">
+          <input type="text" class="form-control" id="fr">
+        </div>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>T</label>
+        <div class="form-group col">
+          <input type="text" class="form-control" id="t">
+        </div>
+      </div>
+	  
+      <!--Doencas Cronicas-->
+      <div class="form-row">
+        <div class="form-group col -auto">
+          <label>Doenças Cronicas:</label>
+          <input type="text" class="form-control" id="doencascronicas">
+        </div>
+      </div>
+      <!--Queixa-->
+      <div class="form-row">
+        <div class="form-group col -auto">
+          <label>Queixa no momento:</label>
+          <input type="text" class="form-control" id="queixamomento">
+        </div>
+      </div>
+
+      <!--Anamnese-->
+      <div class="form-row">
+
+        <div class="form-group col -auto">
+          <label>Anamnese</label>
+          <textarea class="form-control" id="anamnese" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col -auto">
+          <label>Exame Fisico</label>
+          <textarea class="form-control" id="examefisico" rows="4"></textarea>
+        </div>
+      </div>
+
+	  
+<!-- Botão cadastrar -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Cadastrar
+</button> 
+
+<!-- Gatilho do botão cadastrar -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Deseja cadastrar o prontuário
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<!--Botão resetar -->	
+	<button type="reset" class="btn btn-secondary col-md-1 mb-0">Limpar</button>
+    </form>
+</div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script>
+  $('input#txt_consulta').quicksearch('table#tabela tbody tr'); </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+ 
+ 
+
+
+</html>
